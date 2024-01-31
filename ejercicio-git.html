@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio git</title>
+</head>
+<body>
+    <script>
+        let array = [
+            {"id":"1"},
+            {"id":"1"},
+            {"id":"2"}
+            ],
+            fn = function (item) {
+            return item.id;
+            }
+
+        
+        function grupoId(array){
+            let resultado = {}
+            
+            array.forEach(function(item){
+                let id = item.id;
+                if (!resultado[id]){
+                    resultado[id] = []
+                }
+                resultado[id].push(item)
+                
+            })
+            console.log(resultado);
+        }
+
+        grupoId(array)
+
+        let array2 = [
+            [1, 2, 3],
+            [1, 3, 5],
+            [1, 5, 9]
+        ]
+        fn = function (list) {
+            return String(list[0]);
+        }
+
+        function grupoId2(array2){
+            let resultado = {}
+            let intro = []
+            
+            array.forEach(function(item){
+                console.log(item);
+                intro.push(item)
+            })
+            resltado = {
+                1 : intro
+            }
+            console.log(resultado);
+        }
+
+        grupoId2(array2)
+    </script>
+</body>
+</html>
